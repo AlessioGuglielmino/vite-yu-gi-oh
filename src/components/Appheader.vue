@@ -1,11 +1,13 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      title: " Yu-Gi-Oh",
+    };
   },
 };
 </script>
 
-<template></template>
+<template>{{ title }}</template>
 
 <style lang="scss" scoped></style>

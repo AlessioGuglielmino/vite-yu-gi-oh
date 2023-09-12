@@ -1,15 +1,20 @@
 <script>
+import AppMain from "./components/AppMain.vue";
+import AppHeader from "./components/AppHeader.vue";
+import AppCard from "./components/card/AppCard.vue";
+
 export default {
   data() {
-    return {
-      title: "hello",
-    };
+    return {};
   },
+
+  components: { AppMain, AppHeader, AppCard },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <AppHeader />
+  <AppMain />
 </template>
 
-<style></style>
+<style lang="scss" scoped></style>

@@ -6,6 +6,6 @@ export default {
 };
 </script>
 
-<template lang="scss" scoped></template>
+<template></template>
 
-<style></style>
+<style lang="scss"></style>
