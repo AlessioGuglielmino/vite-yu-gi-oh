@@ -26,13 +26,24 @@ export default {
 <template>
   <div class="container">
     <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-4">
-      <div class="col" v-for="card in cards">
+      <div class="col text-center" v-for="card in cards">
         <img :src="card.card_images[0].image_url_small" alt="" />
 
-        {{ card.name }}
+        <div class="card-name">{{ card.name }}</div>
+        <div class="card-archetype">
+          {{ card.archetype }}
+        </div>
+        <div class="card-race">
+          {{ card.race }}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card-name {
+  font-weight: bolder;
+  color: white;
+}
+</style>
