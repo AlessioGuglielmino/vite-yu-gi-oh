@@ -3,9 +3,7 @@ import AppCardList from "./card/AppCardList.vue";
 
 export default {
   data() {
-    return {
-      title: "hello",
-    };
+    return {};
   },
   components: { AppCardList },
 };

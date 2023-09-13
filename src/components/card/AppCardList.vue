@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+import AppCard from "./AppCard.vue";
 
 export default {
   data() {
@@ -7,6 +8,7 @@ export default {
       cards: [],
     };
   },
+  components: { AppCard },
   methods: {
     fetchCards() {
       axios
@@ -26,24 +28,14 @@ export default {
 <template>
   <div class="container">
     <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-4">
-      <div class="col text-center" v-for="card in cards">
-        <img :src="card.card_images[0].image_url_small" alt="" />
-
-        <div class="card-name">{{ card.name }}</div>
-        <div class="card-archetype">
-          {{ card.archetype }}
-        </div>
-        <div class="card-race">
-          {{ card.race }}
-        </div>
-      </div>
+      <AppCard
+        v-for="card in cards"
+        :image_url_small="card.card_images[0].image_url_small"
+        :name="card.name"
+        :archetype="card.archetype"
+      />
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.card-name {
-  font-weight: bolder;
-  color: white;
-}
-</style>
+<style lang="scss" scoped></style>
