@@ -26,8 +26,24 @@ export default {
 </script>
 
 <template>
+  <div class="dropdown filter">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Archetype
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+
   <div class="container">
-    <div class="row g-4 row-cols-2 row-cols-md-3 row-cols-lg-4">
+    <div class="row g-2 row-cols-2 row-cols-md-3 row-cols-lg-4">
       <AppCard
         v-for="card in cards"
         :image_url_small="card.card_images[0].image_url_small"
@@ -38,4 +54,9 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.filter {
+  padding-top: 20px;
+  margin: 20px;
+}
+</style>

@@ -13,8 +13,16 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
+  <div class="wrapper">
+    <div class="header"><AppHeader /></div>
+    <AppMain />
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.wrapper {
+}
+.header {
+  height: 100px;
+}
+</style>

@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="col text-center">
+  <div class="col text-center carta g-3">
     <img :src="image_url_small" alt="" />
 
     <div class="card-name">{{ name }}</div>
@@ -27,6 +27,9 @@ export default {
 </template>
 
 <style lang="scss">
+.carta {
+  background-color: orange;
+}
 .card-name {
   font-weight: bolder;
   color: white;

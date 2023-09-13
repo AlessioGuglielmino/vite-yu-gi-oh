@@ -10,12 +10,15 @@ export default {
 </script>
 
 <template>
-  <main><AppCardList /></main>
+  <!-- BOTTONE PER FILTRO RICERCA -->
+  <div class="container">
+    <!-- IMPORTO APP CARD LIST  -->
+    <main><AppCardList /></main>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 main {
   background-color: orange;
-  min-height: 500px;
 }
 </style>
