@@ -1,6 +1,7 @@
 <script>
 import axios from "axios";
 import AppCard from "./AppCard.vue";
+import BaseSelect from "../BaseSelect.vue";
 
 export default {
   data() {
@@ -8,7 +9,7 @@ export default {
       cards: [],
     };
   },
-  components: { AppCard },
+  components: { AppCard, BaseSelect },
   methods: {
     fetchCards() {
       axios
@@ -26,21 +27,7 @@ export default {
 </script>
 
 <template>
-  <div class="dropdown filter">
-    <button
-      class="btn btn-secondary dropdown-toggle"
-      type="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      Archetype
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-  </div>
+  <BaseSelect />
 
   <div class="container">
     <div class="row g-2 row-cols-2 row-cols-md-3 row-cols-lg-4">
@@ -54,9 +41,4 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped>
-.filter {
-  padding-top: 20px;
-  margin: 20px;
-}
-</style>
+<style lang="scss" scoped></style>

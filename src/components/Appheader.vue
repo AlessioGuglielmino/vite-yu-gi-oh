@@ -18,7 +18,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-header {
+.header {
 }
 h1 {
   font-family: Arial, Helvetica, sans-serif;
