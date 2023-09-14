@@ -18,6 +18,9 @@ export default {
           this.cards = response.data.data;
         });
     },
+    handelFilter(archetypesSelected) {
+      console.log("filter" + archetypesSelected);
+    },
   },
 
   created() {
@@ -27,7 +30,7 @@ export default {
 </script>
 
 <template>
-  <BaseSelect />
+  <BaseSelect @filter-submit="handelFilter" />
 
   <div class="container">
     <div class="row g-2 row-cols-2 row-cols-md-3 row-cols-lg-4">

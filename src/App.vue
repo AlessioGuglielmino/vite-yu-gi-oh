@@ -20,8 +20,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
-}
 .header {
   height: 100px;
 }
